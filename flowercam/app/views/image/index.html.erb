@@ -8,6 +8,8 @@
     
 <%= form_tag (apply_filter_path),:multipart => true, :html => { :id => "certificate_update_form" } do %>
    	<%= file_field 'file_content', 'content'%>
+   	<%= label_tag :filter%>
+   	<%= select_tag :filter, options_for_select(filters_array)%><li>
 		<%= submit_tag "Upload" %>
 <% end %>
 
