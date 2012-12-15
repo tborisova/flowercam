@@ -1,4 +1,6 @@
 Flowercam::Application.routes.draw do
+	get "image/index"
+	post "image/apply_filter" , :as=>:apply_filter
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -48,7 +50,7 @@ Flowercam::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  # root :to => "welcome#index"
+  root :to => "image#index"
 
   # See how all your routes lay out with "rake routes"
 
